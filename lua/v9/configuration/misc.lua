@@ -50,6 +50,11 @@ vim.api.nvim_create_autocmd('BufWinLeave', {
 
 vim.cmd [[ noremap <silent> <C-n> :lua require'tree'.toggle()<CR> ]]
 
+require("indent_blankline").setup {
+    show_end_of_line = true,
+	filetype_exclude = { "dashboard", "startify" }
+}
+
 require("Comment").setup()
 require("nvim-autopairs").setup{}
 require("lightspeed").setup{}

@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
     use 'numToStr/Comment.nvim'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'romgrk/barbar.nvim'
+    use 'mhinz/vim-startify'
 
     -- Lsp Setup Starts here!!
     use {
