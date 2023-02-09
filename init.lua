@@ -1,0 +1,8 @@
+require("v9.plugins")
+require("v9.options")
+require("v9.configuration.tabline")
+require("v9.configuration.lualine")
+require("v9.configuration.tree")
+require("v9.configuration.lsp")
+require("v9.configuration.misc")
+require("v9.keybinds")
