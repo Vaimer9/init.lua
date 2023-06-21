@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
     use 'romgrk/barbar.nvim'
     use 'mhinz/vim-startify'
+    use 'morhetz/gruvbox'
 
     -- Lsp Setup Starts here!!
     use {

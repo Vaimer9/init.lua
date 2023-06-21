@@ -1,6 +1,4 @@
-
 vim.cmd [[
-
 let g:startify_skiplist = [
     \ '~/temp',
     \ ]
