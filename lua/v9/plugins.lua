@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
     use 'elixir-editors/vim-elixir'
     use 'p00f/clangd_extensions.nvim'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'windwp/nvim-autopairs'
@@ -23,6 +23,29 @@ return require('packer').startup(function(use)
     use 'romgrk/barbar.nvim'
     use 'mhinz/vim-startify'
     use 'morhetz/gruvbox'
+    use 'rebelot/kanagawa.nvim'
+    use 'luisiacc/gruvbox-baby'
+    use 'andweeb/presence.nvim'
+    use 'neovimhaskell/haskell-vim'
+    use 'bluz71/vim-nightfly-colors'
+    use 'navarasu/onedark.nvim'
+    use {'kaarmu/typst.vim', ft = {'typst'}}
+    use 'craftzdog/solarized-osaka.nvim'
+    use 'kepano/flexoki'
+    use 'bluz71/vim-moonfly-colors'
+    use 'savq/melange-nvim'
+    use 'rmehri01/onenord.nvim'
+    use 'Shatur/neovim-ayu'
+    use {
+        'uloco/bluloco.nvim',
+        requires = { 'rktjmp/lush.nvim' }
+    }
+    use 'dasupradyumna/midnight.nvim'
+    use 'JoosepAlviste/palenightfall.nvim'
+    use 'kartikp10/noctis.nvim'
+    use 'hachy/eva01.vim'
+    use 'rileytwo/kiss'
+    use 'blazkowolf/gruber-darker.nvim'
 
     -- Lsp Setup Starts here!!
     use {

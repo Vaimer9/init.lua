@@ -13,6 +13,8 @@ opt.termguicolors = true
 opt.mouse = "a"
 opt.updatetime = 300
 opt.laststatus=3
+opt.scrolloff = 8
+vim.opt.list = true
 
 vim.g.plastic_nvim_transparent_bg = true
 
@@ -22,15 +24,34 @@ vim.g.doom_one_italic_comments        = false
 vim.g.doom_one_enable_treesitter      = true
 vim.g.doom_one_diagnostics_text_color = false
 
-vim.cmd [[
+require('kanagawa').setup({
+    colors = {
+        theme = {
+            all = {
+                ui = {
+                    bg_gutter = "none"
+                }
+            }
+        }
+    }
+})
 
+require('onedark').setup {
+    style = 'darker'
+}
+
+require("solarized-osaka").setup({
+    transparent = false,
+})
+
+vim.cmd [[
+let g:ada_extended_tagging = v:null
 set shortmess+=c
 set hidden
 syntax on
 filetype plugin on
 
 " Set the colorscheme
-colorscheme doom-one
-
+colorscheme solarized-osaka
 ]]
 
