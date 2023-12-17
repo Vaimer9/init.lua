@@ -91,3 +91,4 @@ require("presence").setup({
     line_number_text    = "Line %s out of %s",
 })
 
+require("focus").setup()

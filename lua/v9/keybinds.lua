@@ -14,6 +14,7 @@ bind({
     { "<leader>ss", ":w<CR>" },
     { "<leader>ff", ":Telescope find_files<CR>" },
     { "<leader>tt", ":TransparentToggle<CR>" },
+    { "<leader>zm", ":ZenMode" },
     { "<C-a>", ":NvimTreeToggle<CR>" },
     { "K", "<cmd>lua vim.lsp.buf.hover()<cr>" },
     { "gl", "<cmd>lua vim.diagnostic.open_float()<cr>" }

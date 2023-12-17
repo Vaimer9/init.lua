@@ -46,6 +46,8 @@ return require('packer').startup(function(use)
     use 'hachy/eva01.vim'
     use 'rileytwo/kiss'
     use 'blazkowolf/gruber-darker.nvim'
+    use 'https://gitlab.com/HiPhish/neovim.rkt'
+    use 'nvim-focus/focus.nvim'
 
     -- Lsp Setup Starts here!!
     use {

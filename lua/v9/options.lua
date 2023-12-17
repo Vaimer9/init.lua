@@ -51,7 +51,11 @@ set hidden
 syntax on
 filetype plugin on
 
+inoremap \lambda λ
+
 " Set the colorscheme
-colorscheme solarized-osaka
+colorscheme moonfly
+colorscheme gruber-darker
+
 ]]
 
