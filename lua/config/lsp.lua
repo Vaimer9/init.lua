@@ -3,3 +3,5 @@ vim.lsp.config("clangd", {
     filetypes = { 'c' },
     -- root_markers = { 'CMakeLists.txt' },
 })
+
+

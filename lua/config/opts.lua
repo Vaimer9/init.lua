@@ -18,4 +18,4 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
   end,
 })
 
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("solarized")

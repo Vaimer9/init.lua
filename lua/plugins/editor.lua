@@ -45,6 +45,10 @@ return {
         priority = 1000 ,
         config = true,
         opts = ...
+    },
+    {
+        "sphamba/smear-cursor.nvim",
+        opts = {},
     }
 }
 
