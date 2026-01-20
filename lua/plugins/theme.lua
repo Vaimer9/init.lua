@@ -15,5 +15,17 @@ return {
             -- vim.o.background = 'light'
             require('solarized').setup(opts)
         end,
+    },
+    {
+        'Tsuzat/NeoSolarized.nvim'
+    },
+    {
+        'aktersnurra/no-clown-fiesta.nvim'
+    },
+    {
+        'marko-cerovac/material.nvim'
+    },
+    {
+        'ramojus/mellifluous.nvim'
     }
 }

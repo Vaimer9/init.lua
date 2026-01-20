@@ -36,8 +36,27 @@ return {
                       vim.lsp.enable("verible")
                     end,
 
+                    -- ["basedpyright"] = function()
+                    --     vim.lsp.config("basedpyright", {
+                    --         capabilities = capabilities,
+                    --         settings = {
+                    --             basedpyright = {
+                    --                 typeCheckingMode = "basic",
+                    --                 diagnosticSeverityOverrides = {
+                    --                     reportUnknownReturnType = "none",
+                    --                     reportUnknownParameterType = "none",
+                    --                     reportUnknownVariableType = "none",
+                    --                 },
+                    --             },
+                    --         },
+                    --     })
+                    --
+                    --     vim.lsp.enable("basedpyright")
+                    -- end,
+
                 }
             })
+
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 callback = function(args)
