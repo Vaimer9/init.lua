@@ -37,7 +37,26 @@ return {
     {
         'nvim-treesitter/nvim-treesitter',
         lazy = false,
-        build = ':TSUpdate'
+        build = ':TSUpdate',
+
+        config = function()
+            -- 1. Use the new API to get the parser config table
+            local parser_config = require("nvim-treesitter").get_available()
+
+            vim.api.nvim_create_autocmd('User', {
+              pattern = 'TSUpdate',
+              callback = function()
+                require('nvim-treesitter.parsers').spade = {
+                  install_info = {
+                    url = "https://gitlab.com/spade-lang/tree-sitter-spade/",
+                    files = { "src/parser.c" },
+                    branch = "main",
+                  },
+                  filetype = "spade",
+                }
+              end,
+            })
+        end
     },
     {
         'windwp/nvim-autopairs',
@@ -55,6 +74,21 @@ return {
     {
         "sphamba/smear-cursor.nvim",
         opts = {},
+        enabled = false
+    },
+    {
+        'kdheepak/lazygit.nvim',
+        lazy = true,
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        keys = {
+            { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+        }
     }
 }
 

@@ -17,7 +17,7 @@ return {
         end,
     },
     {
-        'Tsuzat/NeoSolarized.nvim'
+        'Tsuzat/NeoSolarized.nvim',
     },
     {
         'aktersnurra/no-clown-fiesta.nvim'
@@ -27,5 +27,46 @@ return {
     },
     {
         'ramojus/mellifluous.nvim'
-    }
+    },
+    {
+        'folke/tokyonight.nvim'
+    },
+    {
+        'rebelot/kanagawa.nvim'
+    },
+    {
+        'navarasu/onedark.nvim'
+    },
+    {
+        'mofiqul/vscode.nvim'
+    },
+    {
+        'blazkowolf/gruber-darker.nvim'
+    },
+    {
+        'Aejkatappaja/cendre'
+    },
+    {
+        'skylarmb/torchlight.nvim'
+    },
+    {
+        'olimorris/onedarkpro.nvim'
+    },
+    {
+        'nyoom-engineering/oxocarbon.nvim'
+    },
+    {
+        'EdenEast/nightfox.nvim'
+    },
+    {
+        'luisiacc/gruvbox-baby'
+    },
+    {
+        'ellisonleao/gruvbox.nvim',
+        opts = {
+            -- overrides = {
+            --     ["@lsp.mod.defaultLibrary.cpp"] = { fg = "#fb4934" },
+            -- },
+        },
+    },
 }

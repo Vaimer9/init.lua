@@ -5,6 +5,7 @@ vim.opt.smartindent = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.cmdheight = 0
 
 vim.api.nvim_create_autocmd({ "InsertEnter" }, {
   callback = function()
@@ -18,4 +19,4 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
   end,
 })
 
-vim.cmd.colorscheme("material-darker")
+vim.cmd.colorscheme("gruber-darker")

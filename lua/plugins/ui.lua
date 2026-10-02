@@ -50,4 +50,7 @@ return {
             require("alpha").setup(conf.config)
         end,
     },
+    {
+        'akinsho/toggleterm.nvim'
+    }
 }

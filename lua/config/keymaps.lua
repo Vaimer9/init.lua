@@ -15,4 +15,5 @@ bind({
     { "K", "<cmd>lua vim.lsp.buf.hover()<cr>" },
     { "gl", "<cmd>lua vim.diagnostic.open_float()<cr>" },
     { "<leader>q", "<Cmd>BufferClose<CR>"},
+    { "<leader>w", "<Cmd>bd<CR>"}
 })

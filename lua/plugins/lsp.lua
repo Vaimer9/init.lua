@@ -8,10 +8,25 @@ return {
         },
 
         config = function()
-            local capabilities =
-            require("cmp_nvim_lsp").default_capabilities()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             local mason_lspconfig = require("mason-lspconfig")
+
+            local lspconfig = require('lspconfig')
+
+            local configs = require('lspconfig.configs')
+
+            if not configs.spade then
+              configs.spade = {
+                default_config = {
+                  cmd = { 'swim', 'lsp' },
+                  filetypes = { 'spade' },
+                  root_dir = lspconfig.util.root_pattern('swim.toml'),
+                },
+              }
+            end
+
+            lspconfig.spade.setup({})
 
             -- This runs for EVERY installed LSP
             mason_lspconfig.setup({
@@ -35,41 +50,21 @@ return {
 
                       vim.lsp.enable("verible")
                     end,
-
-                    -- ["basedpyright"] = function()
-                    --     vim.lsp.config("basedpyright", {
-                    --         capabilities = capabilities,
-                    --         settings = {
-                    --             basedpyright = {
-                    --                 typeCheckingMode = "basic",
-                    --                 diagnosticSeverityOverrides = {
-                    --                     reportUnknownReturnType = "none",
-                    --                     reportUnknownParameterType = "none",
-                    --                     reportUnknownVariableType = "none",
-                    --                 },
-                    --             },
-                    --         },
-                    --     })
-                    --
-                    --     vim.lsp.enable("basedpyright")
-                    -- end,
-
                 }
             })
 
-
-            vim.api.nvim_create_autocmd("LspAttach", {
-                callback = function(args)
-                    local client = vim.lsp.get_client_by_id(args.data.client_id)
-                    if client and client.server_capabilities.inlayHintProvider then
-                        vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
-                    end
-                end,
-            })
-
-            vim.keymap.set("n", "<leader>ih", function()
-                vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-            end, { desc = "Toggle inlay hints" })
+            -- vim.api.nvim_create_autocmd("LspAttach", {
+            --     callback = function(args)
+            --         local client = vim.lsp.get_client_by_id(args.data.client_id)
+            --         if client and client.server_capabilities.inlayHintProvider then
+            --             vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+            --         end
+            --     end,
+            -- })
+            --
+            -- vim.keymap.set("n", "<leader>ih", function()
+            --     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+            -- end, { desc = "Toggle inlay hints" })
         end,
     },
     {
@@ -148,6 +143,11 @@ return {
     },
     {
         'onsails/lspkind.nvim'
-    }
-
+    },
+    {
+        'davidmh/mdx.nvim'
+    },
+    {
+        'https://gitlab.com/spade-lang/spade-vim'
+    },
 }
